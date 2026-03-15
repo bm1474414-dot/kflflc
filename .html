@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>Abdullah ❤️ Asmaa</title>
+
+<style>
+
+body{
+background:black;
+color:white;
+font-family:Arial;
+text-align:center;
+margin:0;
+}
+
+.page{
+display:none;
+padding:40px;
+}
+
+button{
+padding:12px 25px;
+font-size:18px;
+margin:15px;
+border:none;
+border-radius:10px;
+background:#ff0066;
+color:white;
+cursor:pointer;
+box-shadow:0 0 20px #ff0066;
+}
+
+input{
+padding:10px;
+font-size:18px;
+}
+
+/* timers */
+
+.timerBox{
+font-size:20px;
+line-height:1.8;
+}
+
+.timerContainer{
+display:flex;
+justify-content:center;
+gap:80px;
+margin-top:30px;
+}
+
+/* memories */
+
+.memories{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:40px;
+max-width:1000px;
+margin:auto;
+text-align:right;
+}
+
+.memories img{
+width:350px;
+border-radius:20px;
+box-shadow:0 0 30px #ff0066;
+}
+
+/* fireworks */
+
+.fire{
+position:fixed;
+font-size:30px;
+animation:boom 1s linear infinite;
+}
+
+@keyframes boom{
+0%{transform:scale(0)}
+100%{transform:scale(2);opacity:0}
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- صفحة التاريخ -->
+
+<div id="page1" class="page">
+
+<h2>ادخلي تاريخ حبنا</h2>
+
+<input id="date">
+
+<br><br>
+
+<button onclick="check()">دخول</button>
+
+<p id="error"></p>
+
+<p>
+
+اللهم اجمع بيننا بالحلال  
+واجعل بيننا المودة والرحمة  
+وارزقنا الزواج الصالح
+
+</p>
+
+</div>
+
+
+<!-- رسالة الحب -->
+
+<div id="page2" class="page">
+
+<h2>رسالة ليكي ❤️</h2>
+
+<p>
+
+يا أسماء  
+انتي أجمل حاجة حصلتلي في حياتي  
+
+وجودك في حياتي خلاني أشوف الدنيا بشكل أجمل  
+ضحكتك بتغير يومي  
+وصوتك بيريح قلبي  
+
+نفسي نكمل حياتنا سوا  
+وربنا يجمعنا في الحلال قريب 
+
+
+</p>
+
+<p>
+بحبك جداً يا سمسومة
+وكل يوم بيعدي بحبك أكتر
+وكل عيد  بيعدي علينا بحس إني محظوظ أكتر إني ليا واحدة زيك في حياتي
+وكل عام وانتي بالف خير يا حبيبتي ❤️
+بس ابقا معاكي و والله اخليكي اسعد انسانه علي وجهه الارض
+</p>
+
+<button onclick="showPage(3)">التالي</button>
+<button onclick="showPage(1)">رجوع</button>
+
+</div>
+
+
+<!-- صفحة العداد -->
+
+<div id="page3" class="page">
+
+<h2>عداد حبنا ❤️</h2>
+
+<div class="timerContainer">
+
+<div class="timerBox">
+
+<h3>كام لينا مع بعض</h3>
+
+<div id="loveTimer"></div>
+
+</div>
+
+<div class="timerBox">
+
+<h3>كام متبقي على عيد حبنا ❤️ (19/5)</h3>
+
+<div id="valTimer"></div>
+
+</div>
+
+</div>
+
+<br>
+
+<button onclick="showPage(4)">التالي</button>
+<button onclick="showPage(2)">رجوع</button>
+
+</div>
+
+
+<!-- memories -->
+
+<div id="page4" class="page">
+
+<h2>Memories ❤️</h2>
+
+<div class="memories">
+
+<img src="https://i.postimg.cc/SQCrDnhw/IMG-20260315-135854.jpg">
+
+<div>
+
+<p>
+19/5/2023  
+اول يوم حبيتك فيه كان يوم جمعة الساعة 10 بليل
+</p>
+
+<p>
+22/6/2023  
+اول يوم سمعت صوتك في الواقع
+</p>
+
+<p>
+6/6/2024  
+اول يوم يعدي عليا من غيرك وساعتها قررتي ننفصل
+</p>
+
+<p>
+عدي شهر ورجعنا تاني  
+ويوم 12/11/2024 انفصلنا  
+ورجعنا يوم 25/12/2024  
+ودخلنا 2025 مع بعض
+</p>
+
+<p>
+يمكن دي تكون بعض الذكريات   العبيطه
+بس انتي عمري كله  
+ازاي انسى يوم معاكي ❤️
+</p>
+
+</div>
+
+</div>
+
+<button onclick="showPage(5)">التالي</button>
+<button onclick="showPage(3)">رجوع</button>
+
+</div>
+
+
+<!-- صفحة الدعاء -->
+
+<div id="page5" class="page">
+
+<h2>دعاء ❤️</h2>
+
+<p>
+
+اللهم إن كان حبنا خيراً لنا  
+فاجمع بيننا بالحلال  
+
+واجعل بيننا المودة والرحمة  
+وارزقنا حياة مليئة بالسعادة  
+
+ولا تفرق بيننا أبداً
+اللهمّ إنّي استعففت فأغنني من فضلك بحقّ قولك تعالى: (وَلْيَسْتَعْفِفِ الَّذِينَ لَا يَجِدُونَ نِكَاحًا حَتَّى يُغْنِيَهُمُ اللَّـهُ مِن فَضْلِهِ).[٦] اللهمّ ارزقني الزّوجة الصّالحة التي إن أمرتها أطاعتني، وإن نظرت إليها سرّتني، وإن أقسمت عليها أبرتني، وإن غبت عنها حفظتني في نفسها ومالي. اللهمّ يا مطلع على جميع حالاتنا اقضِ عنّا جميع حاجاتنا، وتجاوز عن جميع سيّئاتنا وزلّاتنا، وتقبّل جميع حسناتنا وسامحنا، ونسألك ربّنا سبيل نجاتنا في حياتنا ومعادنا، اللهمّ يا مجيب الدّعاء، يا مغيث المستغيثين، يا راحم الضّعفاء أجب دعوتنا، وعجّل بقضاء حاجاتنا يا أرحم الرّاحمين. اللهمّ إنّي أريد أن أتزوّج فقدّر لي من الرّجال أعفّهم فرجاً، وأحفظهم لي في نفسي ومالي، وأوسعهم رزقاً وأعظمهم بركة، وقدّر لي ولداً طيّباً تجعل له خلقاً صالحاً في حياتي ومماتي. اللهمّ يا دليل الحائرين، ويا رجاء القاصدين، ويا كاشف الهم، ويا فارج الغم، اللهمّ زوّجنا واغننا بحلالك عن حرامك يا الله يا كريم يا ربّ العرش المجيد ارحمنا برحمتك يا أرحم الرّاحمين، اللهمّ إنّي أسألك باسمك العليم إنّك عالمٌ بحالي، فبرحمتك يا رب يا رب يا رب زوّجني برجلٍ صالح يستر عليّ، ويكون قرّة عينٍ لي وأكون قرّة عينٍ له. اللهمّ إنّي أسألك باسمك الأعظم الذي إذا سألك به أحد أجبته، وإذا استغاثك به أحد أغثته، وإذا استنصرك به أحد استنصرته أن تزوّجني يا رب يا أرحم الرّاحمين، يا أرحم الرّاحمين، يا أرحم الرّاحمين. اللهمّ إنّي أسالك بدعاء ذي النّون يوم دعاك في ظلماتٍ ثلاث: ظلمة الليل، وظلمة البحر، وظلمة بطن الحوت فاستجبت له وأنجيته، لا إله إلّا أنت سبحانك إنّي كنت من الظّالمين لا إله إلّا أنت سبحانك إنّي كنت من الظّالمين، لا إله إلّا أنت سبحانك إنّي كنت من الظّالمين، اللهمّ ارزقنا الزّوج الذي يخافك، ولا يعذّبني برحمتك يا أرحم الرّاحمين.
+
+
+</p>
+
+<button onclick="showPage(6)">التالي</button>
+<button onclick="showPage(4)">رجوع</button>
+
+</div>
+
+
+<!-- الصفحة الأخيرة -->
+
+<div id="page6" class="page">
+
+<h2>
+
+طول ما وصلتي ل هنا عايز اقولك حاجة  
+
+انتي اهم حاجة ف حياتي  
+ويومي مش بيكمل الا بوجودك  
+
+الفراق عنك صعب  
+
+وانا بموت فيكي  
+
+بس مش عارف اعبر غير لما اكون معاكي  
+
+معزتك عندي بالدنيا وما فيها  
+وهييجي اليوم وتقولي  
+وفيت بوعدك
+
+</h2>
+
+<button onclick="showPage(5)">رجوع</button>
+
+</div>
+
+
+<script>
+
+/* عرض الصفحات */
+
+function showPage(num){
+
+document.querySelectorAll(".page").forEach(p=>p.style.display="none")
+document.getElementById("page"+num).style.display="block"
+
+if(num==6){
+fireworks()
+}
+
+}
+
+showPage(1)
+
+
+/* كلمة السر */
+
+function check(){
+
+let d=document.getElementById("date").value
+
+if(d=="19/5/2023"){
+showPage(2)
+}
+
+else{
+
+document.getElementById("error").innerText="التاريخ غلط يا سمسومة 😔"
+
+}
+
+}
+
+
+/* عداد الحب */
+
+const loveDate = new Date("May 19 2023 22:00")
+
+function updateLove(){
+
+let now=new Date()
+
+let diff=now-loveDate
+
+let sec=Math.floor(diff/1000)
+let min=Math.floor(sec/60)
+let hr=Math.floor(min/60)
+let day=Math.floor(hr/24)
+let week=Math.floor(day/7)
+let month=Math.floor(day/30)
+let year=Math.floor(day/365)
+
+document.getElementById("loveTimer").innerHTML=
+
+`
+${year} سنة<br>
+${month} شهر<br>
+${week} أسبوع<br>
+${day} يوم<br>
+${hr} ساعة<br>
+${min} دقيقة<br>
+${sec} ثانية
+`
+
+}
+
+
+/* عداد عيد حبكم */
+
+function updateVal(){
+
+let now=new Date()
+
+let year=now.getFullYear()
+
+let loveDay=new Date(year,4,19)
+
+if(now>loveDay){
+
+loveDay=new Date(year+1,4,19)
+
+}
+
+let diff=loveDay-now
+
+let sec=Math.floor(diff/1000)
+let min=Math.floor(sec/60)
+let hr=Math.floor(min/60)
+let day=Math.floor(hr/24)
+let month=Math.floor(day/30)
+
+document.getElementById("valTimer").innerHTML=
+
+`
+${month} شهر<br>
+${day} يوم<br>
+${hr} ساعة<br>
+${min} دقيقة<br>
+${sec} ثانية
+`
+
+}
+
+setInterval(()=>{
+updateLove()
+updateVal()
+},1000)
+
+
+/* fireworks */
+
+function fireworks(){
+
+setInterval(()=>{
+
+let f=document.createElement("div")
+
+f.className="fire"
+
+f.innerHTML="🎆"
+
+f.style.left=Math.random()*100+"%"
+f.style.top=Math.random()*100+"%"
+
+document.body.appendChild(f)
+
+setTimeout(()=>{f.remove()},1000)
+
+},300)
+
+}
+
+</script>
+
+</body>
+</html>
